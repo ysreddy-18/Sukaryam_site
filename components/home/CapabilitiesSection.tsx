@@ -9,56 +9,47 @@ const capabilities = [
     icon: <Building2 className="w-8 h-8" />,
     title: 'CORPORATE Conferences/EVENTS',
     description: 'Professional corporate event planning and execution',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/corporate-conferences.jpg'  },
   {
     icon: <Stethoscope className="w-8 h-8" />,
     title: 'Medical CONFERENCES/events',
     description: 'Specialized medical conference management',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/medical-conferences.jpg'  },
   {
     icon: <Sparkles className="w-8 h-8" />,
     title: 'ENTERTAINMENT',
     description: 'Dynamic entertainment event coordination',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/entertainment.jpg'  },
   {
     icon: <Music className="w-8 h-8" />,
     title: 'Concerts & Artists Management',
     description: 'End-to-end concert planning and artist coordination',
-    image: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/concerts.jpg'  },
   {
     icon: <Gift className="w-8 h-8" />,
     title: 'SOCIAL EVENTS MANAGEMENT',
     description: 'Memorable social gathering organization',
-    image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/social-events.jpg'  },
   {
     icon: <Users className="w-8 h-8" />,
     title: 'Dealers/Employees/ Investors Meet',
     description: 'Strategic stakeholder meeting management',
-    image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/stakeholder-meetings.jpg'  },
   {
     icon: <Rocket className="w-8 h-8" />,
     title: 'Product Launches',
     description: 'Impactful product launch event execution',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/product-launches.jpg'  },
   {
     icon: <Plane className="w-8 h-8" />,
     title: 'MICE | Corporate Tours',
     description: 'Comprehensive MICE solutions and corporate travel',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/mice-tours.jpg'  },
   {
     icon: <GraduationCap className="w-8 h-8" />,
     title: 'Workshops',
     description: 'Interactive workshop planning and facilitation',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80'
-  }
+    image: '/assets/workshops.jpg'  },
 ];
 
 export default function CapabilitiesSection() {
@@ -95,6 +86,7 @@ export default function CapabilitiesSection() {
                     src={capability.image}
                     alt={capability.title}
                     fill
+                    quality={85}
                     className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                   />
                 </div>

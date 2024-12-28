@@ -1,8 +1,11 @@
 "use client";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'
 
 const CompanySection = () => {
+  const router = useRouter()
+
   return (
     <section id="company" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -15,10 +18,11 @@ const CompanySection = () => {
         >
           <div className="relative h-[400px]">
             <Image
-src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3" alt="Our Company"
+src= '/assets/corporate-event.jpg' alt="Our Company"
               fill
               className="object-cover rounded-lg"
               priority
+              quality={85}
             />
           </div>
           
@@ -53,7 +57,8 @@ delivered on time and on budget.
               </div>
             </div> */}
 
-            <button className="mt-8 px-8 py-3 bg-[#cc9e4b] hover:bg-[#cc9e4b]/90 text-white rounded-lg transition duration-300">
+            <button  
+             onClick={() => router.push('/About')} className="mt-8 px-8 py-3 bg-[#cc9e4b] hover:bg-[#cc9e4b]/90 text-white rounded-lg transition duration-300">
               know More
             </button>
           </div>

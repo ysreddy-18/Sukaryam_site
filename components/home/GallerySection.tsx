@@ -5,26 +5,22 @@ import Image from 'next/image';
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3',
-    alt: 'Corporate Event',
+    src: '/assets/corporate-event.jpg',    alt: 'Corporate Event',
     category: 'Corporate',
     description: 'Elevating business gatherings to memorable experiences'
   },
   {
-    src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622',
-    alt: 'Wedding Celebration',
+    src: '/assets/wedding-celebration.jpg',    alt: 'Wedding Celebration',
     category: 'Wedding',
     description: 'Creating magical moments for your special day'
   },
   {
-    src: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30',
-    alt: 'Product Launch',
+    src: '/assets/product-launch.jpg',    alt: 'Product Launch',
     category: 'Launch',
     description: 'Showcasing your products with impact and style'
   },
   {
-    src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329',
-    alt: 'Entertainment Event',
+    src: '/assets/entertainment-event.jpg',    alt: 'Entertainment Event',
     category: 'Entertainment',
     description: 'Delivering unforgettable entertainment experiences'
   }
@@ -59,6 +55,9 @@ export default function GallerySection() {
                   alt={image.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={85}
+                  priority={index < 2}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">

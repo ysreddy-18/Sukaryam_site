@@ -8,8 +8,7 @@ export default function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://www.speakeragency.co.uk/media/kkplcoza/conference-speakers-1200x630.jpg"
-          alt="Event"
+src="/assets/conference-speakers.jpg"          alt="Event"
           fill
           className="object-cover" 
           priority
@@ -29,7 +28,7 @@ export default function HeroSection() {
           </p>
           <div className="flex gap-4 justify-center animate-fade-in-up">
             <Link
-              href="/contact"
+              href="/Contact"
               className="px-4 md:px-8 py-4 bg-[#cc934b] text-black rounded-full font-medium hover:bg-[#cc9e4b]/90 transition-all inline-flex items-center gap-2"
             >
               Get Started

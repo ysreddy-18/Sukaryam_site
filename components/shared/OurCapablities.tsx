@@ -10,8 +10,8 @@ const capabilities = [
     title: 'CORPORATE Conferences/EVENTS',
     description: 'Professional corporate event planning and execution',
     detailedDescription:[ "Through understanding a company's unique brand and identifying their target audience, our team designs an event concept and coordinates all technical aspects before the event begins.We promise you the exquisite & splendid time for your delegates, business associates, & employees.",],
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80'
-  },
+    image:"/assets/corporate-conferences.jpg" 
+   },
   {
     icon: <Stethoscope className="w-6 h-6" />,
     title: 'Medical CONFERENCES/events',
@@ -21,21 +21,21 @@ const capabilities = [
         "With over two decades of experience managing conferences, we are uniquely suited to help you develop strategies to take your conference to the next level. As your long-term pa ner, we listen to your goals, work with your planning team and draw on historical data and our relationships to build a solid foundation to make a success story.",
         " We also take advantage of the latest tools and technology to streamline the logistics for your conference such as a centralised database for all your pa icipants, transparent nancials, historical pro ling and promotional tools.",
     ], 
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80'
+    image:"/assets/medical-conferences.jpg" 
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
     title: 'ENTERTAINMENT',
     description: 'Dynamic entertainment event coordination',
     detailedDescription: [" Sukaryam has experience and extensive database of talented pe ormers to suit all of your ente ainment needs. From celebrity singers and dancers to x-factor, the voice and india’s got talent contestants, as well as cha topping a ists, our priority is to nd the most unique and exceptional act to suit your event. "],
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80'
+    image:"/assets/entertainment.jpg" 
   },
   {
     icon: <Music className="w-6 h-6" />,
     title: 'Concerts & Artists Management',
     description: 'End-to-end concert planning and artist coordination',
     detailedDescription: ["Celebrities from di erent elds prove an asset and spice up any event. In our country, bollywood or spo s celebrities hold a larger than life image among their fans and thus this management is to be dealt with special care by our professionals. "],
-    image: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&q=80'
+    image:"/assets/concerts.jpg" 
   },
   {
     icon: <Gift className="w-6 h-6" />,
@@ -45,7 +45,7 @@ const capabilities = [
         "We ensure that we transform your imagination of a dream wedding into a spectacular celebration. We cra an astounding wedding of your choice – extravagant or intimate, royal or traditional, you think of it and we make it happen.",
         "Be it Goa, Rishikesh, Corbe , Udaipur or any other destination, we have been managing multiple destination weddings in india and abroad within unbelievable budgets. We will make it happen in the famous fo s, hotels, palaces, and beaches.",
     ],
-    image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&q=80'
+    image:"/assets/social-events.jpg" 
   },
   {
     icon: <Users className="w-6 h-6" />,
@@ -54,7 +54,8 @@ const capabilities = [
     detailedDescription: [
         " Sometimes, when you are announcing a new distribution initiative or want to motivate your distribution, sales channel, dealers, investors or the shareholders, a spectacular event with right kind information, speakers and ente ainment is the need of the hour. Our specialized team does everything from selecting the venue to hospitality and catering for any business meet."
     ],
-    image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80'
+    image:"/assets/stakeholder-meetings.jpg" 
+
   },
   {
     icon: <Rocket className="w-6 h-6" />,
@@ -63,7 +64,7 @@ const capabilities = [
     detailedDescription:[
         " At Sukaryam we understand the impo ance of first impressions and the need for a high impact event that introduces your product in style. Our dedicated events team are experienced in all elements of launch delivery, so you can concentrate on unveiling the product and leave the planning, logistics, launch idea and management to us."
     ],
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80'
+    image:"/assets/product-launches.jpg" 
   },
   {
     icon: <Plane className="w-6 h-6" />,
@@ -72,7 +73,7 @@ const capabilities = [
     detailedDescription:[
         "There is a huge extent of customization in case of a MICE (O site) trip in terms of destinations, conference activities, needs, hotel sightseeing Ente ainment, gala dinner venue, team building, our prime focus is always to cater to our customers’ speci c needs and the intent is to delight the customer. "
     ],
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80'
+    image:"/assets/mice-tours.jpg" 
   },
   {
     icon: <GraduationCap className="w-6 h-6" />,
@@ -81,7 +82,7 @@ const capabilities = [
     detailedDescription:[
         "Inspirational talks from passionate, creative people. The idea is a simple one- That people who do things, can inspire the rest of us to go and do things too. We do help in doing all the arrangements."
     ],
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80'
+    image:"/assets/workshops.jpg" 
   }
 ]
 
@@ -93,7 +94,7 @@ export default function OurCapabilities() {
     <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="max-w-[1400px] mx-auto px-4 pt-8">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">Our Capabilities</h2>
+          <h2 className="text-5xl font-bold text-[#0e2a47] mb-4">Our Capabilities</h2>
           <div className="w-24 h-1.5 bg-[#cc9e4b] mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Delivering exceptional experiences across diverse event categories
@@ -154,15 +155,15 @@ export default function OurCapabilities() {
 
           {/* Desktop List */}
           <div className="hidden lg:block lg:w-1/3">
-            <div className="space-y-2 p-6 border-r bg-gray-100 border-gray-100 rounded flex-col justify-center items-center">
+            <div className="space-y-2 p-6 border-r bg-[#0e2a47] border-gray-100 rounded-md flex-col justify-center items-center">
               {capabilities.map((capability) => (
                 <button
                   key={capability.title}
                   onClick={() => setActiveCapability(capability)}
                   className={`w-full text-left p-4 rounded transition-all duration-300 
                     ${activeCapability.title === capability.title 
-                      ? 'bg-[#cc9e4b]/10 border-l-4 border-[#cc9e4b]' 
-                      : 'hover:bg-gray-50 border-l-4 border-transparent'}`}
+                      ? 'bg-[#fff]    border-l-4 border-[#cc9e4b]' 
+                      : 'hover:bg-gray-50 border-l-4 border-transparent !hover:!text-gray-900 '}`}
                 >
                   <div className="flex items-center gap-4">
                     <div className={`p-2 rounded-lg ${activeCapability.title === capability.title 
@@ -172,7 +173,7 @@ export default function OurCapabilities() {
                     </div>
                     <h3 className={`font-medium ${activeCapability.title === capability.title 
                       ? 'text-gray-900' 
-                      : 'text-gray-600'}`}>
+                      : 'text-gray-400 '}`}>
                       {capability.title}
                     </h3>
                   </div>
@@ -183,7 +184,7 @@ export default function OurCapabilities() {
 
           {/* Content Section */}
           <div className="lg:w-2/3">
-            <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden mb-8">
+            <div className="relative h-[300px] lg:h-[400px] rounded-md overflow-hidden mb-8">
               <Image
                 src={activeCapability.image}
                 alt={activeCapability.title}

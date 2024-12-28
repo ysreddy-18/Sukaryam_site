@@ -2,6 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 import Logo from '@/assets/Logo2.png';
+interface QuickLink {
+  name: string;
+  path: string;
+}
+const quickLinks: QuickLink[] = [
+  { name: 'About Us', path: '/About' },
+  { name: 'Services', path: '/#Services' },
+  { name: 'Our Capablities', path: '/#OurCapablities' },
+  { name: 'Contact', path: '/#Contact' }
+];
 
 export default function Footer() {
   return (
@@ -41,23 +51,23 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
-              {['About Us', 'Services', 'Our Work', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href="#" 
-                    className="text-gray-300 hover:text-[#cc9e4b] transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+  {quickLinks.map((link: QuickLink) => (
+    <li key={link.name}>
+      <Link 
+        href={link.path} 
+        className="text-gray-300 hover:text-[#cc9e4b] transition-colors"
+      >
+        {link.name}
+      </Link>
+    </li>
+  ))}
+</ul>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 cursor-default ">
               {[
                 'Corporate Events',
                 'Social Events',
@@ -67,7 +77,7 @@ export default function Footer() {
               ].map((service) => (
                 <li key={service}>
                   <Link 
-                    href="#" 
+                    href="Services" 
                     className="text-gray-300 hover:text-[#cc9e4b] transition-colors"
                   >
                     {service}

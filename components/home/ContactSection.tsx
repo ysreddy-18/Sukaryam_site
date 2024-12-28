@@ -1,7 +1,7 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { ContactForm } from '../shared/ContactForm';
 
 const contactInfo = [
   {
@@ -29,6 +29,7 @@ const contactInfo = [
 export default function ContactSection() {
   return (
     <section className="relative py-24 overflow-hidden ">
+
       {/* Background Design */}
       <div className="absolute inset-0 ">
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#cc9e4b]/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
@@ -40,16 +41,17 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-10"
         >
           <h2 className="text-5xl font-bold text-[#0e2a47] mb-4">Get in Touch</h2>
           <div className="w-24 h-1.5 bg-[#cc9e4b] mx-auto mb-6 rounded-full" />
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Let's discuss how we can make your next event extraordinary
+            Lets&apos; discuss how we can make your next event extraordinary
           </p>
         </motion.div>
+        <ContactForm/>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
         {contactInfo.map((info, index) => (
           <motion.div
             key={info.title}

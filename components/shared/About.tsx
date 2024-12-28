@@ -7,10 +7,10 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[500px] rounded-2xl overflow-hidden">
           <Image
-              src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80"
-              alt="Sukaryam Events"
+src="/assets/about-hero.jpg"              alt="Sukaryam Events"
               fill
               className="object-cover"
+              quality={85}
               priority
             />
           </div>

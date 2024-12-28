@@ -30,9 +30,9 @@ export default function AboutSection() {
           >
             <div className="relative h-[600px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80"
-                alt="About Us"
+src="/assets/about-image.jpg"                alt="About Us"
                 fill
+                quality={85}    
                 className="object-cover"
               />
             </div>

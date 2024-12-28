@@ -3,38 +3,34 @@
 import { motion } from 'framer-motion';
 import { Building2, PartyPopper, Music, Rocket, Plane, Wallet, Users, Camera, Gift, Heart } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'
 
 const services = [
   {
     icon: <Building2 className="w-6 h-6" />,
     title: 'Travel Management',
     description: 'Comprehensive travel logistics and coordination for seamless event experiences',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/travel-management.jpg'  },
   {
     icon: <Wallet className="w-6 h-6" />,
     title: 'Financial Management',
     description: 'Strategic budgeting and financial planning for optimal event execution',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/financial-management.jpg'  },
   {
     icon: <PartyPopper className="w-6 h-6" />,
     title: 'Sponsor Attraction',
     description: 'Building valuable partnerships and securing event sponsorships',
-    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/sponsor-attraction.jpg'  },
   {
     icon: <Users className="w-6 h-6" />,
     title: 'Speaker Management',
     description: 'End-to-end speaker coordination and logistics handling',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/speaker-management.jpg'  },
   {
     icon: <Building2 className="w-6 h-6" />,
     title: 'Venue Selection and Negotiations',
     description: 'Strategic venue sourcing and contract negotiations',
-    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/venue-selection.jpg'  },
   // {
   //   icon: <Rocket className="w-6 h-6" />,
   //   title: 'Abstract Management',
@@ -45,8 +41,7 @@ const services = [
     icon: <Gift className="w-6 h-6" />,
     title: 'Planning Team Support',
     description: 'Dedicated assistance and resources for event planning teams',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/planning-support.jpg'  },
   // {
   //   icon: <Users className="w-6 h-6" />,
   //   title: 'Delegate Registration',
@@ -57,18 +52,18 @@ const services = [
     icon: <Heart className="w-6 h-6" />,
     title: 'Marketing/Promotion and Website Development',
     description: 'Comprehensive digital marketing and web presence solutions',
-    image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&q=80'
-  },
+    image: '/assets/marketing-promotion.jpg'  },
   {
     icon: <Camera className="w-6 h-6" />,
     title: 'Food & Beverage/Catering Management',
     description: 'Expert catering coordination and dietary requirement handling',
-    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80'
-  }
+    image: '/assets/catering-management.jpg'  },
 ];
 
 
 export default function ServicesSection() {
+  const router = useRouter()
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -98,8 +93,10 @@ export default function ServicesSection() {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  fill
+fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -145,7 +142,9 @@ export default function ServicesSection() {
               </motion.div>
             ))}
           </div>
-          <button className='lg:col-span-4 mx-auto px-8 py-3 bg-[#cc9e4b] text-white rounded-full font-semibold hover:bg-[#b88c3d] transition-colors duration-300 flex items-center gap-2'>
+          <button 
+           onClick={() => router.push('/Services')} 
+           className='lg:col-span-4 mx-auto px-8 py-3 bg-[#cc9e4b] text-white rounded-full font-semibold hover:bg-[#b88c3d] transition-colors duration-300 flex items-center gap-2'>
   View More
 </button>
         </div>

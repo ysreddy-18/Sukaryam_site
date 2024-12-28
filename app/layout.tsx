@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
+import { WhatsAppButton } from '@/components/shared/WhatsAppButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,7 +24,7 @@ export default function RootLayout({
    <Header />
    <div className='max-w-[1440px] mx-auto'>
    {children}
-
+   <WhatsAppButton />
    </div>
    <Footer/>
    </body>
